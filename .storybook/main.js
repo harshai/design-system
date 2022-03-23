@@ -1,4 +1,6 @@
 const { vanillaExtractPlugin } = require("@vanilla-extract/vite-plugin");
+const { resolve } = require("path");
+const projectRootDir = resolve(__dirname);
 
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
@@ -13,6 +15,14 @@ module.exports = {
   },
   async viteFinal(config) {
     config.plugins.push(vanillaExtractPlugin());
-    return config;
+
+    return {
+      ...config,
+      resolve: {
+        alias: {
+          "design-system": resolve(projectRootDir, "../src/packages"),
+        },
+      },
+    };
   },
 };

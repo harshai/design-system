@@ -9,6 +9,9 @@ const space: ScaleObject = {
   m: 0.5,
   l: 1,
   xl: 2,
+  // for width and height, but isn't required for padding.
+  // Is there a better away to handle this?
+  max: 100,
 };
 
 const border: ScaleObject = {
@@ -21,10 +24,10 @@ const border: ScaleObject = {
 const borderRadius: ScaleObject = {
   none: 0,
   m: 0.5,
-  max: 999,
+  max: 100,
 };
 
-export const spaceProperties = defineProperties({
+const spaceProperties = defineProperties({
   properties: {
     display: ["none", "flex"],
     flexDirection: ["row", "column"],
@@ -45,3 +48,5 @@ export const spaceProperties = defineProperties({
     placeItems: ["alignItems", "justifyContent"],
   },
 });
+
+export default spaceProperties;
