@@ -7,7 +7,7 @@ interface BoxProps {
 }
 
 const Box = ({ children }: BoxProps) => {
-  return <div className={`${boxStyles} ${spaceProperties}`}>{children}</div>;
+  return <div className={`${boxStyles}`}>{children}</div>;
 };
 
 export default Box;
