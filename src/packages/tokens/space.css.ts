@@ -30,7 +30,7 @@ const borderRadius: ScaleObject = {
 
 const spaceProperties = defineProperties({
   properties: {
-    display: ["none", "flex"],
+    display: ["none", "flex", "inline-flex"],
     flexDirection: ["row", "column"],
     alignItems: ["stretch", "flex-start", "center", "flex-end"],
     justifyContent: ["stretch", "flex-start", "center", "flex-end"],
@@ -39,7 +39,7 @@ const spaceProperties = defineProperties({
     paddingRight: scaleToRem(space),
     paddingTop: scaleToRem(space),
     paddingBottom: scaleToRem(space),
-    border: scaleToRem(border),
+    borderWidth: scaleToRem(border),
     borderRadius: scaleToRem(borderRadius),
   },
   shorthands: {

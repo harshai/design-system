@@ -1,29 +1,24 @@
-import React, {
-  ReactNode,
-  createElement,
-  forwardRef,
-  ElementType,
-} from "react";
+import { createElement } from "react";
 import clsx from "clsx";
 
-import { sprinkles, Sprinkles } from "design-system/tokens";
+import { sprinkles } from "design-system/tokens";
+import { baseReset, elementReset } from "design-system/reset";
 
+import { BoxProps } from "./types";
 import { splitProps } from "./utils";
 import boxStyles from "./Box.css";
 
-interface BoxProps extends Sprinkles {
-  children: ReactNode;
-  as?: ElementType;
-  onClick?: () => void;
-  role?: string;
-}
-
-const Box = ({ as = "div", ...props }: BoxProps) => {
+const Box = ({ as: element = "div", ...props }: BoxProps) => {
   const { boxProps, atomProps } = splitProps(props, sprinkles);
 
-  return createElement(as, {
+  const resetStyles =
+    typeof element === "string" && Object.keys(elementReset).includes(element)
+      ? [...baseReset, ...elementReset[element]]
+      : baseReset;
+
+  return createElement(element, {
     ...boxProps,
-    className: clsx(boxStyles, sprinkles(atomProps)),
+    className: clsx(resetStyles, boxStyles, sprinkles(atomProps)),
   });
 };
 Box.displayName = "Box";
