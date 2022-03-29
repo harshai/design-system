@@ -1,7 +1,7 @@
 import Box from "design-system/box";
 
 const App = () => {
-  return <Box>test</Box>;
+  return <Box>This is a box</Box>;
 };
 
 export default App;
