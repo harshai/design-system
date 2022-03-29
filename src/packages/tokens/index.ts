@@ -1,3 +1,7 @@
+import { createSprinkles } from "@vanilla-extract/sprinkles";
+
 import spaceProperties from "./space.css";
 
-export { spaceProperties };
+export const sprinkles = createSprinkles(spaceProperties);
+
+export type Sprinkles = Parameters<typeof sprinkles>[0];

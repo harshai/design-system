@@ -11,7 +11,18 @@ export default {
   },
 } as ComponentMeta<typeof Box>;
 
-const Template: ComponentStory<typeof Box> = (args) => <Box {...args} />;
+const Template: ComponentStory<typeof Box> = (args) => (
+  <Box
+    {...args}
+    onClick={() => console.log()}
+    role="button"
+    padding="l"
+    display="flex"
+    border="l"
+    borderRadius="m"
+    borderColor="red"
+  />
+);
 
 export const Simple = Template.bind({});
 Simple.args = {

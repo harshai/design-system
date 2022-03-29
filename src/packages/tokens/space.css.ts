@@ -9,7 +9,8 @@ const space: ScaleObject = {
   m: 0.5,
   l: 1,
   xl: 2,
-  // for width and height, but isn't required for padding.
+  // TODO:
+  // Max is required for width and height, but isn't required for padding.
   // Is there a better away to handle this?
   max: 100,
 };

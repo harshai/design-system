@@ -1,13 +1,31 @@
-import { ReactNode } from "react";
-import boxStyles from "./Box.css";
-import { spaceProperties } from "design-system/tokens";
+import React, {
+  ReactNode,
+  createElement,
+  forwardRef,
+  ElementType,
+} from "react";
+import clsx from "clsx";
 
-interface BoxProps {
+import { sprinkles, Sprinkles } from "design-system/tokens";
+
+import { splitProps } from "./utils";
+import boxStyles from "./Box.css";
+
+interface BoxProps extends Sprinkles {
   children: ReactNode;
+  as?: ElementType;
+  onClick?: () => void;
+  role?: string;
 }
 
-const Box = ({ children }: BoxProps) => {
-  return <div className={`${boxStyles}`}>{children}</div>;
+const Box = ({ as = "div", ...props }: BoxProps) => {
+  const { boxProps, atomProps } = splitProps(props, sprinkles);
+
+  return createElement(as, {
+    ...boxProps,
+    className: clsx(boxStyles, sprinkles(atomProps)),
+  });
 };
+Box.displayName = "Box";
 
 export default Box;
