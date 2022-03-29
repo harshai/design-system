@@ -9,7 +9,7 @@ import { splitProps } from "./utils";
 import boxStyles from "./Box.css";
 
 const Box = ({ as: element = "div", ...props }: BoxProps) => {
-  const { boxProps, atomProps } = splitProps(props, sprinkles);
+  const { boxProps, sprinkleProps } = splitProps(props, sprinkles);
 
   const resetStyles =
     typeof element === "string" && Object.keys(elementReset).includes(element)
@@ -18,7 +18,7 @@ const Box = ({ as: element = "div", ...props }: BoxProps) => {
 
   return createElement(element, {
     ...boxProps,
-    className: clsx(resetStyles, boxStyles, sprinkles(atomProps)),
+    className: clsx(resetStyles, boxStyles, sprinkles(sprinkleProps)),
   });
 };
 Box.displayName = "Box";

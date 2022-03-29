@@ -11,20 +11,20 @@ const splitProps = (
   sprinkles: { properties: Set<string> }
 ) =>
   Object.keys(props).reduce(
-    function ({ atomProps, boxProps }, curr) {
+    function ({ sprinkleProps, boxProps }, curr) {
       if (sprinkles.properties.has(curr)) {
         return {
-          atomProps: { ...atomProps, [curr]: props[curr] },
+          sprinkleProps: { ...sprinkleProps, [curr]: props[curr] },
           boxProps,
         };
       }
       return {
-        atomProps,
+        sprinkleProps,
         boxProps: { ...boxProps, [curr]: props[curr] },
       };
     },
     {
-      atomProps: {},
+      sprinkleProps: {},
       boxProps: {},
     }
   );
