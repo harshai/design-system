@@ -13,6 +13,10 @@ module.exports = {
   core: {
     builder: "storybook-builder-vite",
   },
+  reactOptions: {
+    fastRefresh: true,
+    strictMode: true,
+  },
   async viteFinal(config) {
     config.plugins.push(vanillaExtractPlugin());
 
