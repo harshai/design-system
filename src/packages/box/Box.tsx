@@ -1,14 +1,15 @@
 import { createElement } from "react";
 import clsx from "clsx";
 
+import * as reset from "design-system/reset";
 import { sprinkles } from "design-system/tokens";
-import { baseReset, elementReset } from "design-system/reset";
 
 import { BoxProps } from "./types";
 import { splitProps } from "./utils";
 import boxStyles from "./box.css";
 
 const Box = ({ as: element = "div", ...props }: BoxProps) => {
+  const { baseReset, elementReset } = reset;
   const { boxProps, sprinkleProps } = splitProps(props, sprinkles);
 
   const resetStyles =
