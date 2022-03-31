@@ -6,7 +6,7 @@ import { baseReset, elementReset } from "design-system/reset";
 
 import { BoxProps } from "./types";
 import { splitProps } from "./utils";
-import boxStyles from "./Box.css";
+import boxStyles from "./box.css";
 
 const Box = ({ as: element = "div", ...props }: BoxProps) => {
   const { boxProps, sprinkleProps } = splitProps(props, sprinkles);

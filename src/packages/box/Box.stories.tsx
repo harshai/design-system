@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import Box from "./Box";
+import Box from "./box";
 
 export default {
   title: "Example/Box",
