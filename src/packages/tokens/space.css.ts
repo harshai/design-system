@@ -24,7 +24,7 @@ const border: ScaleObject = {
 
 const borderRadius: ScaleObject = {
   none: 0,
-  m: 0.5,
+  m: 0.25,
   max: 100,
 };
 
