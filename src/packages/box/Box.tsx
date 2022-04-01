@@ -8,7 +8,7 @@ import { BoxProps } from "./types";
 import { splitProps } from "./utils";
 import boxStyles from "./box.css";
 
-const Box = ({ as: element = "div", ...props }: BoxProps) => {
+const Box = ({ as: element = "div", className, ...props }: BoxProps) => {
   const { baseReset, elementReset } = reset;
   const { boxProps, sprinkleProps } = splitProps(props, sprinkles);
 
@@ -19,7 +19,12 @@ const Box = ({ as: element = "div", ...props }: BoxProps) => {
 
   return createElement(element, {
     ...boxProps,
-    className: clsx(resetStyles, boxStyles, sprinkles(sprinkleProps)),
+    className: clsx(
+      resetStyles,
+      boxStyles,
+      sprinkles(sprinkleProps),
+      className
+    ),
   });
 };
 Box.displayName = "Box";

@@ -7,4 +7,5 @@ export interface BoxProps extends Sprinkles {
   as?: ElementType;
   onClick?: () => void;
   role?: string;
+  className?: string;
 }
