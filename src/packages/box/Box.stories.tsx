@@ -20,6 +20,7 @@ const Template: ComponentStory<typeof Box> = (args) => (
       padding="l"
       display="flex"
       borderWidth="l"
+      color="primary"
     />
   </>
 );
