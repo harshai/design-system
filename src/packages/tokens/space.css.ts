@@ -1,4 +1,4 @@
-import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles";
+import { defineProperties } from "@vanilla-extract/sprinkles";
 import { scaleToRem } from "./utils";
 import { ScaleObject } from "./types";
 
