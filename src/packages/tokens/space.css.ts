@@ -17,14 +17,15 @@ const space: ScaleObject = {
 
 const border: ScaleObject = {
   none: 0,
-  s: 0.125,
-  m: 0.25,
-  l: 0.5,
+  s: 0.0625,
+  m: 0.125,
+  l: 0.25,
 };
 
-const borderRadius: ScaleObject = {
+const borderRadius = {
   none: 0,
   m: 0.25,
+  l: 0.5,
   max: 100,
 };
 
@@ -40,13 +41,18 @@ const spaceProperties = defineProperties({
     paddingTop: scaleToRem(space),
     paddingBottom: scaleToRem(space),
     borderWidth: scaleToRem(border),
+    borderStyle: ["solid", "none"],
     borderRadius: scaleToRem(borderRadius),
+    aspectRatio: ["1"],
+    height: scaleToRem(space),
+    width: scaleToRem(space),
   },
   shorthands: {
     padding: ["paddingTop", "paddingBottom", "paddingLeft", "paddingRight"],
     paddingX: ["paddingLeft", "paddingRight"],
     paddingY: ["paddingTop", "paddingBottom"],
     placeItems: ["alignItems", "justifyContent"],
+    size: ["width", "height"],
   },
 });
 
