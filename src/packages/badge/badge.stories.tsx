@@ -26,4 +26,5 @@ export const Simple = Template.bind({});
 Simple.args = {
   children: "10",
   appearance: "default",
+  max: 100,
 };

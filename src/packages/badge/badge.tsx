@@ -13,20 +13,24 @@ const appearanceTextMap = {
   default: { lightMode: "neutral", darkMode: "neutral" },
 };
 
-const Badge = ({ children, appearance, ...props }: BadgeProps) => {
+const Badge = ({ children, appearance, max = 100, ...props }: BadgeProps) => {
   const backgroundColor = appearanceBgMap[appearance];
   const color = appearanceTextMap[appearance];
 
-  if (!children) {
+  const count = parseInt(children, 10);
+
+  if (isNaN(count)) {
     return null;
   }
 
   return (
     <Box
       as="span"
-      padding="xs"
+      padding="s"
+      minWidth="l"
+      minHeight="l"
       borderWidth="s"
-      borderRadius="l"
+      borderRadius="xl"
       borderStyle="solid"
       borderColor="primary"
       display="inline-flex"
@@ -36,7 +40,7 @@ const Badge = ({ children, appearance, ...props }: BadgeProps) => {
       color={color}
       {...props}
     >
-      <Text fontSize="s">{children}</Text>
+      <Text fontSize="s">{count <= max ? count : `${max}+`}</Text>
     </Box>
   );
 };

@@ -26,6 +26,7 @@ const borderRadius = {
   none: 0,
   m: 0.25,
   l: 0.5,
+  xl: 1,
   max: 100,
 };
 
@@ -44,15 +45,16 @@ const spaceProperties = defineProperties({
     borderStyle: ["solid", "none"],
     borderRadius: scaleToRem(borderRadius),
     aspectRatio: ["1"],
-    height: scaleToRem(space),
-    width: scaleToRem(space),
+    minWidth: scaleToRem(space),
+    maxWidth: scaleToRem(space),
+    minHeight: scaleToRem(space),
+    maxHeight: scaleToRem(space),
   },
   shorthands: {
     padding: ["paddingTop", "paddingBottom", "paddingLeft", "paddingRight"],
     paddingX: ["paddingLeft", "paddingRight"],
     paddingY: ["paddingTop", "paddingBottom"],
     placeItems: ["alignItems", "justifyContent"],
-    size: ["width", "height"],
   },
 });
 

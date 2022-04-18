@@ -11,4 +11,6 @@ type Appearance = "primary" | "default";
 
 export default interface BadgeProps extends BoxProps {
   appearance: Appearance;
+  max: number;
+  children: string;
 }
