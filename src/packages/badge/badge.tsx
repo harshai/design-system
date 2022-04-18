@@ -1,7 +1,6 @@
 import Box from "design-system/box";
 import Text from "design-system/text";
 
-import badgeStyles from "./badge.css";
 import BadgeProps from "./types";
 
 const appearanceBgMap = {
@@ -35,7 +34,6 @@ const Badge = ({ children, appearance, ...props }: BadgeProps) => {
       justifyContent="center"
       backgroundColor={backgroundColor}
       color={color}
-      className={badgeStyles}
       {...props}
     >
       <Text fontSize="s">{children}</Text>
