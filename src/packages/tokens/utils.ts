@@ -20,13 +20,14 @@ export function generateSemanticColorNames(
   colorMap: ColorMap[],
   colorPalatte: ColorPalatte
 ) {
-  return colorMap.reduce((prev, curr) => {
-    return {
+  return colorMap.reduce(
+    (prev, curr) => ({
       ...prev,
       [`${curr.usage}Dark`]:
         colorPalatte[`${curr.baseColor}Dark`][`${curr.baseColor}${curr.scale}`],
       [`${curr.usage}`]:
         colorPalatte[curr.baseColor][`${curr.baseColor}${curr.scale}`],
-    };
-  }, {});
+    }),
+    {}
+  );
 }

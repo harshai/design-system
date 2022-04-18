@@ -2,7 +2,7 @@ import { defineProperties } from "@vanilla-extract/sprinkles";
 
 import { slate, slateDark, indigo, indigoDark } from "@radix-ui/colors";
 
-import { ColorMap } from "./types";
+import { ColorMap, ColorPalatte } from "./types";
 import { generateSemanticColorNames } from "./utils";
 
 const palatte = {
@@ -10,7 +10,7 @@ const palatte = {
   slateDark,
   indigo,
   indigoDark,
-};
+} as ColorPalatte;
 const fgColors: ColorMap[] = [
   {
     usage: "primary",

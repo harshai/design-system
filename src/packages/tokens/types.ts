@@ -3,14 +3,28 @@ export type ScaleObject = Partial<Record<Scale, number>>;
 export type ScaleToRem = Partial<Record<Scale, number>>;
 
 export type ColorScale = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
-export type Usage = string; //"app" | "appSubtle";
-export type BaseColors = "indigo" | "slate" | "indigoDark" | "slateDark";
+
+export type Usage =
+  | "app"
+  | "appSubtle"
+  | "primary"
+  | "primaryHover"
+  | "primaryActive"
+  | "primaryFocus"
+  | "neutral"
+  | "neutralHover"
+  | "neutralActive";
+export type Indigo = "indigo" | "indigoDark";
+export type IndigoScale = `${Indigo}${ColorScale}`;
+export type Slate = "slate" | "slateDark";
+export type SlateScale = `${Slate}${ColorScale}`;
+type BaseColor = "indigo" | "slate";
 export type ColorMap = {
   usage: Usage;
   scale: ColorScale;
-  baseColor: BaseColors;
+  baseColor: BaseColor;
 };
 export type ColorPalatte = Record<
-  BaseColors,
-  Record<`${BaseColors}${ColorScale}`, string>
+  Indigo | Slate,
+  Record<IndigoScale | SlateScale, string>
 >;
