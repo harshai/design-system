@@ -1,12 +1,8 @@
 import Text from "design-system/text";
 import { Scale } from "design-system/tokens/types";
+import { resolveAppearance } from "design-system/utils";
 
 import HeadingProps from "./types";
-
-const colorMap = {
-  primary: { lightMode: "primary", darkMode: "primaryDark" },
-  default: { lightMode: "neutral", darkMode: "neutral" },
-};
 
 type FontMap = Record<HeadingProps["as"], { [a: string]: Scale }>; // TODO: Use mapped object
 const fontMap: FontMap = {
@@ -39,7 +35,7 @@ const Heading = ({
   isEmphasised,
   ...props
 }: HeadingProps) => {
-  const color = colorMap[appearance];
+  const { color } = resolveAppearance(appearance);
   const fontStyles = fontMap[as];
 
   return (

@@ -1,21 +1,11 @@
 import Box from "design-system/box";
 import Text from "design-system/text";
+import { resolveAppearance } from "design-system/utils";
 
 import LozengeProps from "./types";
 
-const appearanceBgMap = {
-  primary: { lightMode: "primary", darkMode: "primaryDark" },
-  default: { lightMode: "neutral", darkMode: "neutral" },
-};
-
-const appearanceTextMap = {
-  primary: { lightMode: "primary", darkMode: "primaryDark" },
-  default: { lightMode: "neutral", darkMode: "neutral" },
-};
-
 const Badge = ({ children, appearance, ...props }: LozengeProps) => {
-  const backgroundColor = appearanceBgMap[appearance];
-  const color = appearanceTextMap[appearance];
+  const { color, backgroundColor } = resolveAppearance(appearance);
 
   if (!children) {
     return null;

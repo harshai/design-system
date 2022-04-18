@@ -1,21 +1,11 @@
 import Box from "design-system/box";
 import Text from "design-system/text";
+import { resolveAppearance } from "design-system/utils";
 
 import BadgeProps from "./types";
 
-const appearanceBgMap = {
-  primary: { lightMode: "primary", darkMode: "primaryDark" },
-  default: { lightMode: "neutral", darkMode: "neutral" },
-};
-
-const appearanceTextMap = {
-  primary: { lightMode: "primary", darkMode: "primaryDark" },
-  default: { lightMode: "neutral", darkMode: "neutral" },
-};
-
 const Badge = ({ children, appearance, max = 100, ...props }: BadgeProps) => {
-  const backgroundColor = appearanceBgMap[appearance];
-  const color = appearanceTextMap[appearance];
+  const { color, backgroundColor } = resolveAppearance(appearance);
 
   const count = parseInt(children, 10);
 

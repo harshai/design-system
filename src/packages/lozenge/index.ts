@@ -1,4 +1,5 @@
 import Lozenge from "./lozenge";
 import LozengeProps from "./types";
 
-export { Lozenge, type LozengeProps };
+export {  type LozengeProps };
+export default Lozenge;

@@ -1,13 +1,5 @@
-import { BoxProps } from "design-system/box/types";
-import { Sprinkles } from "design-system/tokens";
-
-type Appearance = "primary" | "default";
-// | "critical"
-// | "caution"
-// | "primary"
-// | "positive"
-// | "info"
-// | "promote";
+import { BoxProps } from "design-system/box";
+import { Appearance } from "design-system/utils";
 
 export default interface BadgeProps extends BoxProps {
   appearance: Appearance;
