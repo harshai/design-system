@@ -46,34 +46,34 @@ const bgColors: ColorMap[] = [
   },
   { usage: "appSubtle", scale: 2, baseColor: "indigo" },
 
-  { usage: "primary", scale: 3, baseColor: "indigo" },
-  { usage: "primaryHover", scale: 4, baseColor: "indigo" },
-  { usage: "primaryActive", scale: 5, baseColor: "indigo" },
+  { usage: "primary", scale: 5, baseColor: "indigo" },
+  { usage: "primaryHover", scale: 6, baseColor: "indigo" },
+  { usage: "primaryActive", scale: 7, baseColor: "indigo" },
 
-  { usage: "neutral", scale: 3, baseColor: "slate" },
-  { usage: "neutralHover", scale: 4, baseColor: "slate" },
-  { usage: "neutralActive", scale: 5, baseColor: "slate" },
+  { usage: "neutral", scale: 5, baseColor: "slate" },
+  { usage: "neutralHover", scale: 6, baseColor: "slate" },
+  { usage: "neutralActive", scale: 7, baseColor: "slate" },
 ];
 
 const borderColors: ColorMap[] = [
   {
     usage: "primary",
-    scale: 6,
+    scale: 8,
     baseColor: "indigo",
   },
   {
     usage: "primaryFocus",
-    scale: 7,
+    scale: 9,
     baseColor: "indigo",
   },
   {
     usage: "primaryActive",
-    scale: 7,
+    scale: 10,
     baseColor: "indigo",
   },
   {
     usage: "primaryHover",
-    scale: 8,
+    scale: 10,
     baseColor: "indigo",
   },
 ];
