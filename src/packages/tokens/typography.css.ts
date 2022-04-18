@@ -18,6 +18,7 @@ const typographyProperties = defineProperties({
   properties: {
     fontSize: scaleToRem(fontSize),
     fontFamily,
+    textTransform: ["uppercase", "capitalize", "lowercase"],
   },
 });
 

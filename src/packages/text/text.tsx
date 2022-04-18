@@ -8,6 +8,7 @@ const Text = ({
   fontSize = "m",
   fontFamily = "body",
   display = "inline-flex",
+  textTransform,
   ...props
 }: TextProps) => {
   return (
@@ -15,6 +16,7 @@ const Text = ({
       as={as}
       fontFamily={fontFamily}
       fontSize={fontSize}
+      textTransform={textTransform}
       className={textStyles}
       {...props}
     />
