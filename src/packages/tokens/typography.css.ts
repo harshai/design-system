@@ -26,7 +26,7 @@ const typographyProperties = defineProperties({
     fontSize: scaleToRem(fontSize),
     fontFamily,
     fontWeight,
-    textDecoration: ["underline", "none"],
+    textDecoration: ["underline", ""],
     textTransform: ["uppercase", "capitalize", "lowercase"],
   },
 });

@@ -49,10 +49,12 @@ const bgColors: ColorMap[] = [
   { usage: "primary", scale: 5, baseColor: "indigo" },
   { usage: "primaryHover", scale: 6, baseColor: "indigo" },
   { usage: "primaryActive", scale: 7, baseColor: "indigo" },
+  { usage: "primaryFocus", scale: 5, baseColor: "indigo" },
 
   { usage: "neutral", scale: 5, baseColor: "slate" },
   { usage: "neutralHover", scale: 6, baseColor: "slate" },
   { usage: "neutralActive", scale: 7, baseColor: "slate" },
+  { usage: "neutralFocus", scale: 5, baseColor: "slate" },
 ];
 
 const borderColors: ColorMap[] = [
@@ -76,6 +78,26 @@ const borderColors: ColorMap[] = [
     scale: 10,
     baseColor: "indigo",
   },
+  {
+    usage: "neutral",
+    scale: 8,
+    baseColor: "slate",
+  },
+  {
+    usage: "neutralFocus",
+    scale: 9,
+    baseColor: "slate",
+  },
+  {
+    usage: "neutralActive",
+    scale: 10,
+    baseColor: "slate",
+  },
+  {
+    usage: "neutralHover",
+    scale: 10,
+    baseColor: "slate",
+  },
 ];
 
 const colorProperties = defineProperties({
@@ -85,6 +107,24 @@ const colorProperties = defineProperties({
     },
     darkMode: {
       selector: ":root[data-theme='dark'] &",
+    },
+    hoverLight: {
+      selector: ":root[data-theme='light'] &:hover",
+    },
+    hoverDark: {
+      selector: ":root[data-theme='dark'] &:hover",
+    },
+    focusLight: {
+      selector: ":root[data-theme='light'] &:focus-visible",
+    },
+    focusDark: {
+      selector: ":root[data-theme='dark'] &:focus-visible",
+    },
+    activeLight: {
+      selector: ":root[data-theme='light'] &:active",
+    },
+    activeDark: {
+      selector: ":root[data-theme='dark'] &:active",
     },
   },
   defaultCondition: ["darkMode", "lightMode"],

@@ -13,7 +13,8 @@ export type Usage =
   | "primaryFocus"
   | "neutral"
   | "neutralHover"
-  | "neutralActive";
+  | "neutralActive"
+  | "neutralFocus";
 export type Indigo = "indigo" | "indigoDark";
 export type IndigoScale = `${Indigo}${ColorScale}`;
 export type Slate = "slate" | "slateDark";
