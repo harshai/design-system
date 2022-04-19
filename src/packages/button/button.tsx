@@ -4,7 +4,7 @@ import { resolveAppearance } from "design-system/utils";
 
 import ButtonProps from "./types";
 
-const apparanceBorderMap = {
+const appearanceBorderMap = {
   primary: {
     lightMode: "primary",
     darkMode: "primaryDark",
@@ -29,7 +29,7 @@ const apparanceBorderMap = {
 
 const Button = ({ children, appearance, ...props }: ButtonProps) => {
   const { color, backgroundColor } = resolveAppearance(appearance, true);
-  const borderColor = apparanceBorderMap[appearance];
+  const borderColor = appearanceBorderMap[appearance];
 
   return (
     <Box
