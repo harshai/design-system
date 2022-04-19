@@ -7,23 +7,23 @@ import HeadingProps from "./types";
 type FontMap = Record<HeadingProps["as"], { [a: string]: Scale }>; // TODO: Use mapped object
 const fontMap: FontMap = {
   h1: {
-    fontSize: "xl",
+    fontSize: "xxxl",
     fontWeight: "xl",
   },
   h2: {
-    fontSize: "l",
+    fontSize: "xxl",
     fontWeight: "l",
   },
   h3: {
-    fontSize: "m",
+    fontSize: "xl",
     fontWeight: "m",
   },
   h4: {
-    fontSize: "s",
+    fontSize: "l",
     fontWeight: "m",
   },
   div: {
-    fontSize: "s",
+    fontSize: "l",
     fontWeight: "s",
   },
 };

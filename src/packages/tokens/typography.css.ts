@@ -4,10 +4,12 @@ import { ScaleObject } from "./types";
 import { scaleToRem } from "./utils";
 
 const fontSize: ScaleObject = {
-  s: 1.25,
-  m: 1.5,
-  l: 2,
-  xl: 2.5,
+  s: 0.75,
+  m: 1,
+  l: 1.25,
+  xl: 1.5,
+  xxl: 1.75,
+  xxxl: 2,
 };
 
 const fontWeight = {
@@ -26,7 +28,7 @@ const typographyProperties = defineProperties({
     fontSize: scaleToRem(fontSize),
     fontFamily,
     fontWeight,
-    textDecoration: ["underline", ""],
+    textDecoration: ["underline", "none"],
     textTransform: ["uppercase", "capitalize", "lowercase"],
   },
 });
